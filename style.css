@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+:root {
+  /**
+     * colors
+     */
+  --black-1: hsl(244, 17%, 19%);
+  --black-2: hsl(245, 16%, 16%);
+  --black-3: hsl(210, 11%, 15%);
+  --blue-1: hsl(217, 100%, 78%);
+  --blue-2: hsl(217, 100%, 72%);
+  --white-1: hsl(0, 0%, 100%);
+  --white-2: hsl(240, 100%, 99%);
+  --white-3: hsl(231, 41%, 97%);
+  --grey: hsl(245, 17%, 27%);
+
+  /**
+     * typography
+     */
+
+  --ff-poppins: "Poppins", sans-serif;
+
+  --fs-1: 36px;
+  --fs-2: 28px;
+  --fs-3: 20px;
+  --fs-4: 17px;
+  --fs-5: 16px;
+  --fs-6: 15px;
+  --fs-7: 14px;
+
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+
+  /**
+     * transition
+     */
+
+  --transition: 0.25s ease;
+  --transition-2: 0.5s ease-out;
+
+  /**
+     * spacing
+     */
+
+  --section-padding: 80px;
+  --section-margin: 80px;
+}
+
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+img,
+span,
+label,
+button {
+  display: block;
+}
+
+button {
+  border: none;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+input {
+  border: none;
+  font: inherit;
+  width: 100%;
+}
+
+html {
+  font-family: var(--ff-poppins);
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url(images/bg1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*-----------------------------------*\
+  #REUSED STYLE
+\*-----------------------------------*/
+
+h1,
+h4 {
+  color: var(--grey);
+  font-family: var(--ff-poppins);
+}
+
+h1 {
+  font-size: var(--fs-1);
+}
+
+h4 {
+  font-size: var(--fs-6);
+}
+
+.btn {
+  max-width: max-content;
+  font-size: var(--fs-7);
+  font-weight: var(--fw-500);
+  padding: 10px 28px;
+  border-radius: 30px;
+  transition: var(--transition);
+  margin-inline: auto;
+  margin-block-start: 10px;
+}
+
+.btn:is(:hover, :focus) {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--blue-1);
+  color: var(--white-1);
+}
+
+.btn-primary:is(:hover) {
+  --blue-1: hsl(217, 100%, 78%);
+  box-shadow: 0 3px 10px var(--blue-2);
+}
+
+.btn-outline {
+  border: 1px solid var(--blue-1);
+  color: var(--blue-1);
+}
+
+.btn-outline:is(:hover, :focus) {
+  background: var(--blue-1);
+  color: var(--white-1);
+  box-shadow: 0 3px 10px var(--blue-2);
+}
+
+.btn-secondary {
+  background: var(--blue-2);
+  color: var(--white-1);
+}
+
+.btn-secondary:is(:hover, :focus) {
+  --blue-1: hsl(310, 72%, 59%);
+  box-shadow: 0 3px 10px var(--blue-2);
+}
+
+/*-----------------------------------*\
+  #FORM
+\*-----------------------------------*/
+
+.container {
+  padding-inline: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--section-padding);
+  border-radius: 1rem;
+  margin-block-end: 30px;
+}
+
+.form-title {
+  margin-block: 12px 8px;
+}
+
+.form-text {
+  font-size: var(--fs-5);
+  font-weight: var(--fw-500);
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+form {
+  padding: 2rem;
+  background: var(--white-2);
+  box-shadow: 0 2px 10px hsla(0, 0%, 0%, 0.1);
+  border-radius: 1rem;
+  max-width: 700px;
+}
+
+.form-header {
+  margin-block: 10px 35px;
+  display: block;
+  text-align: center;
+}
+
+.form-input {
+  padding: 10px;
+}
+
+.input-field {
+  background-color: var(--white-3);
+  color: var(--grey);
+  font-size: var(--fs-5);
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 0.5rem;
+  outline: 1px solid transparent;
+  margin-block-end: 15px;
+}
+
+.input-field:focus {
+  outline-color: var(--blue-1);
+}
+
+.input-field::placeholder {
+  transition: var(--transition-2);
+}
+
+.input-field:focus::placeholder {
+  opacity: 0;
+}
+
+.result {
+  text-align: center;
+  margin-top: 20px;
+}
