@@ -1,6 +1,6 @@
-const button = document.getElementById("btn");
+const form = document.getElementById("form");
 
-button.addEventListener("click", (event) => {
+form.addEventListener("submit", (event) => {
   event.preventDefault();
   const weight = document.getElementById("weight").value;
   const height = document.getElementById("height").value;
@@ -19,7 +19,7 @@ button.addEventListener("click", (event) => {
   }
 
   if (weight <= 0 || height <= 0) {
-    alert("please insert your height and weight");
+    alert("Please input your weight and height correctly");
     result.innerHTML = "";
   }
 });
